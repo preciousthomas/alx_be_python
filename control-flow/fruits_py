@@ -1,0 +1,5 @@
+# Create a list of favorite fruits
+favorite_fruits = ["Mango", "Banana", "Strawberry", "Pineapple"]
+
+# Access and print the second element (index 1)
+print(favorite_fruits[1])

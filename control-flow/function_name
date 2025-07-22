@@ -1,0 +1,10 @@
+def greet():
+    print("good")
+    print("morning")
+greet()
+
+def greet():
+    print("how are")
+    print("you dear")
+    print("precious")
+greet()

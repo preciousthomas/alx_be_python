@@ -15,7 +15,7 @@ class BankAccount:
                 self.transaction_history.append(f"Withdrew: ${amount}")
                 return True
             else:
-                print("insufficient funds or invalid withdrawal amount.")
+                print("Insufficient funds or invalid withdrawal amount.")
                 return False
     def display_balance(self):
                 print(f"Current Balance: ${self.balance}")

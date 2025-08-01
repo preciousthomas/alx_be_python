@@ -1,8 +1,6 @@
 class BankAccount:
-    def __init__(self, account_balance=0):
-        self.balance = account_balance
-        self.transaction_history = []
-
+    def __init__(self, initial_balance=0):
+        self.account_balance = float(initial_balance)  
     def deposit(self, amount):
             if amount > 0:
                 self.balance += amount

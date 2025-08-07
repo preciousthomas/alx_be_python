@@ -4,8 +4,11 @@ class Book:
         self.title = title
         self.author = author
 
-    def get_details(self):
+    def __str__(self):
         return f"Book: {self.title} by {self.author}"
+
+    def get_details(self):
+        return str(self)
 
 
 # Derived class - EBook
@@ -14,8 +17,11 @@ class EBook(Book):
         super().__init__(title, author)
         self.file_size = file_size  # in KB
 
-    def get_details(self):
+    def __str__(self):
         return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
+
+    def get_details(self):
+        return str(self)
 
 
 # Derived class - PrintBook
@@ -24,8 +30,11 @@ class PrintBook(Book):
         super().__init__(title, author)
         self.page_count = page_count
 
-    def get_details(self):
+    def __str__(self):
         return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
+
+    def get_details(self):
+        return str(self)
 
 
 # Composition - Library
@@ -38,4 +47,4 @@ class Library:
 
     def list_books(self):
         for book in self.books:
-            print(book.get_details())
+            print(book)  # This now uses __str__ instead of get_details()
